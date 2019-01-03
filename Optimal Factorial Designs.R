@@ -26,7 +26,7 @@ doe = data.table(expand.grid(nrounds = c(100, 500),
 
 # lets get a smaller optimal design from doe
 # compute the number of levels for each variable in our design
-levels.design2 = sapply(1:ncol(doe), function(j) length(table(doe[, j, with = FALSE])))
+levels.design = sapply(1:ncol(doe), function(j) length(table(doe[, j, with = FALSE])))
 
 # build the general factorial design
 doe.gen = gen.factorial(levels.design)
